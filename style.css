@@ -125,7 +125,7 @@ h2.title {
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 25px;
     direction: rtl;
 }
@@ -163,6 +163,8 @@ h2.title {
     -moz-transform: translateY(-10px);
     -ms-transform: translateY(-10px);
     -o-transform: translateY(-10px);
+    filter: brightness(1.2);
+    -webkit-filter: brightness(1.2);
 }
 
 .azan-wrapper .card>div {

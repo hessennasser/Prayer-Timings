@@ -30,12 +30,24 @@ let gregorianByWords = document.querySelector(".gregorian .byWords");
 let hijriByNumber = document.querySelector(".hijri  .byNumber");
 let gregorianByNumber = document.querySelector(".gregorian .byNumber");
 
-let getTiming = () => {
+let latitude = localStorage.getItem("latitude");
+let longitude = localStorage.getItem("longitude");
+
+if (!latitude || !longitude) {
     navigator.geolocation.getCurrentPosition(
         position => {
             latitude = position.coords.latitude;
             longitude = position.coords.longitude;
 
+            localStorage.setItem("latitude", latitude);
+            localStorage.setItem("longitude", longitude);
+
+            // rest of the code here
+        }
+    );
+}
+
+let getTiming = () => {
             const currentDate = new Date();
             const day = currentDate.getDate().toString().padStart(2, '0');
             const month = (currentDate.getMonth() + 1).toString().padStart(2, '0');
@@ -110,9 +122,7 @@ let getTiming = () => {
                 })
                 .catch(error => console.log('error', error));
         }
-    );
-};
-
+        
 window.addEventListener("load", () => {
     getTiming();
     getTimeNow();
