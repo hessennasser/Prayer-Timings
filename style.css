@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@200;300;400;500;600;700;800;900;1000&family=Roboto:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* 
+font-family: 'Amiri', serif;
+font-family: 'Cairo', sans-serif;
+font-family: 'Roboto', sans-serif;
+*/
+
+body {
+    background: linear-gradient(45deg, rgb(255, 242, 56), rgb(78, 167, 37));
+    min-height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.main-wrapper {
+    padding-bottom: 30px;
+}
+
+header {
+    padding: 15px;
+    font-family: 'Amiri', serif;
+    border-bottom: 1px solid #fff;
+}
+
+header h1 {
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+}
+
+.date-wrapper {
+    padding: 15px;
+    font-family: 'Amiri', serif;
+    border-bottom: 1px solid #fff;
+}
+
+.timing-holder {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #fff;
+}
+
+h2.title {
+    color: #fff;
+    text-align: center;
+    margin: 25px 0;
+    font-family: 'Amiri', serif;
+}
+
+.timeNow {
+    margin: 0 auto;
+    width: 80%;
+    text-align: right;
+    padding: 5px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.timeNow span:not(:last-child) {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid;
+    color: #fff;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.timeNow span:last-child {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+} 
+
+.date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.date p {
+    width: 80%;
+    background-color: #fff;
+    text-align: right;
+    padding: 5px 15px;
+    direction: rtl;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgb(41 39 39 / 50%);
+}
+
+
+.date-wrapper .calendar-holder {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.azan-wrapper {
+    padding: 15px;
+    border-bottom: 1px solid #fff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 25px;
+    direction: rtl;
+}
+
+.azan-wrapper .card {
+    background: url(bg-1.png), linear-gradient(to top, rgb(17 128 108) 50%, rgb(0 255 191));
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 150px;
+    justify-content: center;
+    color: #fff;
+    font-family: 'Amiri', serif;
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-weight: 700;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+    box-shadow: 0 0 10px 2px rgb(41 39 39 / 50%);
+}
+
+.azan-wrapper .card:hover {
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+}
+
+.azan-wrapper .card>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.card .time {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+    .date p {
+        flex-direction: column;
+        align-items: center;
+        gap: 7px;
+    }
+}

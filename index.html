@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مواقيت الصلاة</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://ZulNs.github.io/libs/calendar.css" />
+    <script type="text/javascript" src="https://ZulNs.github.io/libs/hijri-date.js"></script>
+    <script type="text/javascript" src="https://ZulNs.github.io/libs/calendar.js"></script>
+
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <header>
+            <h1>مواقيت الصلاة</h1>
+        </header>
+        <div class="date-wrapper">
+            <div class="timing-holder">
+                <h2 class="title">التوقيت الحالي</h2>
+                <div class="timeNow">
+                    <span class="hours">00</span> :
+                    <span class="minutes">00</span> :
+                    <span class="seconds">00</span>
+                    <span class="pmOrAm"></span>
+                </div>
+            </div>
+            <div class="holder">
+                <h2 class="title">تاريخ اليوم</h2>
+                <div class="date">
+                    <p class="hijri">التاريخ الهجري: <span class="byWords">29 شعبان 1444هـ</span> <span
+                            class="byNumber">1444/8/1</span></p>
+                    <p class="gregorian">التاريخ الميلادي: <span class="byWords">21 مارس 2023 م</span> <span
+                            class="byNumber">2023/2/21</span></p>
+                </div>
+                <div class="calendar-holder">
+                    <div id="calendar"><input id="show-button" type="button" onclick="showMe();"
+                            value="Show Calendar" /></div>
+                </div>
+            </div>
+        </div>
+        <div class="azan-wrapper">
+            <div class="holder">
+                <h2 class="title">مواقيت الاذان</h2>
+                <div class="grid">
+                    <div class="card Fajr">
+                        <div>
+                            <p>الفجر</p>
+                            <span class="time"></span>
+                        </div>
+                    </div>
+                    <div class="card Sunrise">
+                        <div>
+                            <p>الشروق</p>
+                            <span class="time"></span>
+                        </div>
+                    </div>
+                    <div class="card Dhuhr">
+                        <div>
+                            <p>الظهر</p>
+                            <span class="time"></span>
+                        </div>
+                    </div>
+                    <div class="card Asr">
+                        <div>
+                            <p>العصر</p>
+                            <span class="time"></span>
+                        </div>
+                    </div>
+                    <div class="card Maghrib">
+                        <div>
+                            <p>المغرب</p>
+                            <span class="time"></span>
+                        </div>
+                    </div>
+                    <div class="card Isha">
+                        <div>
+                            <p>العشاء</p>
+                            <span class="time"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
