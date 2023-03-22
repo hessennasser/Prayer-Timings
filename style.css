@@ -341,13 +341,10 @@ h2.title {
 }
 
 .left-side ul li:hover {
+    background-color: #fff;
+    border-color: #0ab790;
     filter: brightness(1.2);
     -webkit-filter: brightness(1.2);
-    transform: scale(1.05);
-    -webkit-transform: scale(1.05);
-    -moz-transform: scale(1.05);
-    -ms-transform: scale(1.05);
-    -o-transform: scale(1.05);
 }
 
 .right-side {
