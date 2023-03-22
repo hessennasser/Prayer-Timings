@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مواقيت الصلاة</title>
+    <title>رمضانك</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://ZulNs.github.io/libs/calendar.css" />
     <script type="text/javascript" src="https://ZulNs.github.io/libs/hijri-date.js"></script>
@@ -15,12 +15,26 @@
 
 <body>
     <div class="main-wrapper">
+        <div class="top-notification">
+            <h2 class="title">هذا العمل البسيط ابتغي به وجه الله تعالي واوهبه علي روح والدي (ناصر محمد علوش ) رحمه
+                الله واسكنه فسيح جناته</h2>
+        </div>
         <header>
-            <h1>مواقيت الصلاة</h1>
+            <div class="header-container">
+                <h1>رمضانك - رمضان كريم</h1>
+                <nav>
+                    <ul>
+                        <li class="header-link"><a href="#date">تاريخ اليوم</a></li>
+                        <li class="header-link"><a href="#azan">مواقيت الاذان</a></li>
+                        <li class="header-link"><a href="#adhkar">الأذكار (حصن المسلم)</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
-        <div class="date-wrapper">
+        <div id="date" class="date-wrapper">
+            <h2 class="title">تاريخ اليوم</h2>
             <div class="timing-holder">
-                <h2 class="title">التوقيت الحالي</h2>
+                <!-- <h2 class="title">التوقيت الحالي</h2> -->
                 <div class="timeNow">
                     <span class="hours">00</span> :
                     <span class="minutes">00</span> :
@@ -29,7 +43,6 @@
                 </div>
             </div>
             <div class="holder">
-                <h2 class="title">تاريخ اليوم</h2>
                 <div class="date">
                     <p class="hijri">التاريخ الهجري: <span class="byWords">29 شعبان 1444هـ</span> <span
                             class="byNumber">1444/8/1</span></p>
@@ -42,7 +55,7 @@
                 </div>
             </div>
         </div>
-        <div class="azan-wrapper">
+        <div id="azan" class="azan-wrapper">
             <div class="holder">
                 <h2 class="title">مواقيت الاذان</h2>
                 <div class="grid">
@@ -85,7 +98,7 @@
                 </div>
             </div>
         </div>
-        <div class="adhkar">
+        <div id="adhkar" class="adhkar">
             <h2 class="title">الأذكار (حصن المسلم)</h2>
             <div class="adhkar-holder">
                 <div class="left-side">

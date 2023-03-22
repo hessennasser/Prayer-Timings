@@ -1,6 +1,6 @@
 // calender
 var showBtn = document.getElementById('show-button'),
-    cal = new Calendar(true, 1, false, true);
+    cal = new Calendar(true, 0, false, true);
 document.getElementById('calendar').appendChild(cal.getElement());
 showMe();
 
@@ -151,12 +151,11 @@ let getAdhkarName = () => {
             dhkrName.forEach(element => {
                 element.addEventListener("click", () => {
                     getAdhkarText(Number(element.attributes.idNumber.value - 1));
-                    console.log();
                 });
             });
         })
         .catch(error => {
-            console.error('Error:', error);
+            alert('Error:', error);
         });
 };
 function getAdhkarText(number) {
@@ -189,7 +188,7 @@ function getAdhkarText(number) {
             })
         })
         .catch(error => {
-            console.error('Error:', error);
+            alert('Error:', error);
         });
 };
 
