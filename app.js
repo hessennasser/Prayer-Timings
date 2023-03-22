@@ -30,6 +30,8 @@ const gregorianByWords = document.querySelector(".gregorian .byWords");
 const hijriByNumber = document.querySelector(".hijri .byNumber");
 const gregorianByNumber = document.querySelector(".gregorian .byNumber");
 
+let numberOfCount;
+
 // Get location from local storage or ask for permission
 let latitude = localStorage.getItem("latitude");
 let longitude = localStorage.getItem("longitude");
@@ -148,7 +150,7 @@ let getAdhkarName = () => {
             let dhkrName = document.querySelectorAll(".dhkr-name");
             dhkrName.forEach(element => {
                 element.addEventListener("click", () => {
-                    getAdhkarText(Number(element.attributes.idNumber.value - 1))
+                    getAdhkarText(Number(element.attributes.idNumber.value - 1));
                     console.log();
                 });
             });
@@ -167,10 +169,24 @@ function getAdhkarText(number) {
                 let liItemText = document.createElement("li");
                 liItemText.innerHTML = `
                 <p>${data[number].array[result].text}</p>
-                <p class="number">${data[number].array[result].count}</p>
+                <p class="number-count">${data[number].array[result].count}</p>
                 `;
                 TextOfAdhkar.appendChild(liItemText);
             }
+            numberOfCount = document.querySelectorAll(".number-count");
+            numberOfCount.forEach(ele => {
+                ele.addEventListener("click", ()=> {
+                    allCount = Number(ele.textContent);
+                    
+                    if (ele.textContent > 0) {
+                        nowCount = ele.textContent = Number(ele.textContent) - 1;
+                    }
+                    perCount = ((allCount - nowCount) / allCount);
+                    ele.style.backgroundColor = `rgba(10, 183, 144,${perCount})`;
+                    if (ele.textContent == 0) {
+                    }
+                })
+            })
         })
         .catch(error => {
             console.error('Error:', error);
