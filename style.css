@@ -271,7 +271,7 @@ h2.title {
 
 .left-side.hidden {
     border-right: none;
-    max-height: 40px !important;
+    max-height: 60px !important;
     overflow: hidden;
 
 }
